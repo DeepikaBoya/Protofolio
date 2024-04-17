@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+    <title>My protofolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+<script src="https://kit.fontawesome.com/8de878f9d5.js" crossorigin="anonymous"></script>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+        
+        
+
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+</script>
+</head>
+<body>
+    <header>
+<div>
+    <nav class="nav">
+        <h2> Protfolio</h2>
+        <ul>
+            <li><span><a href="#home"> Home</a></span></li> 
+           <li><span><a href="#Aboutme"> About</a></span></li> 
+           <li><span><a href="#project"> Projects</a></span></li>
+
+           <li><span><a href="#contact"> Contact</a></span></li> 
+           <i class="fa-solid fa-xmark"></i>
+        </ul>
+        <i class="fa-solid fa-bars"></i>
+       
+    </nav>
+    </div>
+    </header>
+    <main>
+
+        <section>
+    <div class="desc">
+        <h4> Hi, My name is</h4>
+             <h1>Deepika Boya</h1> 
+             <h3>I m a Front end developer</h3>
+    </div>
+    <!-- </section> -->
+    <!-- <section> -->
+    <div>
+        <!-- <button><a target="_blank" href="resume_download_link">Download resume</a></button> -->
+        <button type="button" class="button"> <a href="images/Resume_DeepikaBoya.pdf" download>Download My Resume</a></button>
+
+    </div>
+    </section>
+
+    <section id="Aboutme">
+        <div class="row">
+        <div class="img">
+            <img src="images/mypic.jpeg">
+        </div>
+
+        <div class="about-text">
+
+            <h2>About<span style="color:#ff004f";>Me</span></h2>
+            <h5><span style="color:rgba(243, 20, 79, 0.8)">FrontEnd</span> Developer</h5>
+            <p>Welcome to my portfolio! I'm a passionate web developer with a <br>focus on creating user-friendly and visually appealing websites
+             with a keen eye for design and a love for creating seamless, user-friendly experiences on the web.
+          
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                   
+                    <li>
+                        <span>
+                            web development
+                        </span><br>
+                        <ul>
+                            <li>HTML, CSS, and JavaScript,ReactJs,Redux</li>
+                            <li> DataBase: PostgreSQL,MongoDb,Mysql</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="tab-contents" id="Experience">
+                <li>
+                    Experienced Frontend Developer proficient in Angular and React.js, and  knowledge on Nodejs
+                </li>
+                <li>Proven ability to design and develop responsive and user-friendly web applications.</li>
+
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li>
+                        <span>2015</span><br>
+                        SSC
+                    </li>
+                    <li>                        <span>2017</span><br>
+                        Intermediate
+                    
+                    </li>
+                    <li><span>2021</span><br>
+                    Enginerring</li>
+                </ul>
+
+            </div>
+    
+    </p>
+
+        </div>
+        </div>
+    </section>
+    <!-- </section> -->
+
+    <section id="project">
+        <h2 style="font-size: 50px;margin-left: 20%;";>My Projects</h2>
+<div id="portfolio">
+
+    <div class="project">
+        <!-- <img src="project-image-portfolio.jpg" alt="Portfolio Project Image"> -->
+        <div class="project-details">
+            <h3 style="color:#ff004f">NoteApp</h3>
+            <p>Designed and implemented the note management system to enable users to create, edit, and delete notes </p>
+            <p>Technologies:JavaScript,Reactjs,<br>Redux,Nodejs,Expressjs,MongoDb</p>
+            <a href="https://661fb13146cd8f22e0d24f7f--benevolent-malabi-e890fa.netlify.app/" target="_blank">Visit Website <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f"></i></a>
+
+        </div>
+    </div>
+        <div class="project">
+            <!-- <img src="project-image-portfolio.jpg" alt="Portfolio Project Image"> -->
+            <div class="project-details">
+                <h3 style="color:#ff004f">Simple Products Cart page</h3>
+                <p>fetch the products from api and display the products.can add products to cart and calculate product price</p>
+                <p>Technologies: HTML, CSS, JavaScript,Reactjs,contextApi</p>
+                <a href="https://productcart-page.vercel.app/" target="_blank">Visit Website <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f"></i></a>
+
+            </div>
+        </div>
+
+        <div class="project">
+            <!-- <img src="project-image-weather.jpg" alt="Weather App Project Image"> -->
+            <div class="project-details">
+                <h3 style="color:#ff004f">Movies website</h3>
+
+
+                <p>Developed a dynamic web application using React.js to create a comprehensive movie watchlist platform, providing users with the ability to browse movies, add them to a watchlist, search within the watchlist, and utilize pagination and sorting features. Designed and implemented a userfriendly interface with intuitive navigation and responsive design principles.</p>
+                
+                <p>Technologies: HTML, CSS, JavaScript,ReactJs</p>
+                <a href="https://imdb-context.vercel.app/" target="_blank">Visit Website <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f"></i></a>
+
+            </div>
+        </div>
+
+        <div class="project">
+            <!-- <img src="project-image-kanban.jpg" alt="Kanban Board Project Image"> -->
+            <div class="project-details">
+                <h3 style="color:#ff004f;">Kanban Board</h3>
+                <p>Interactive Kanban board for managing tasks and projects.</p>
+                <p>Technologies: HTML, CSS, JavaScript</p>
+                <a href="https://deepikaboya.github.io/kanbanBoard/" target="_blank">Visit Website <i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f"></i></a>
+
+            </div>
+        </div>
+        </div>
+
+
+    </section>
+    <section>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+<div class="contact-left">
+    <h1 class="subtitle" style="font-size: 40px;">
+        Contact Me
+    </h1>
+    <p><i class="fa-solid fa-paper-plane"></i>deepabn2000@gmail.com</p>
+    <p> <i class="fa-solid fa-square-phone-flip"></i>7995032255</p>
+    <div class="social-icons">
+        <a href="https://github.com/DeepikaBoya" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/deepikaboya" target="_blank"><i class="fa fa-linkedin-square" ></i></a>
+
+    </div>
+
+</div>
+<!-- <div class="contact-right">
+    <form>
+       
+        <label for="name">Name</label>
+         <input type="text" id="name" name="name" placeholder="Name">
+
+        <label for="email" placeholder="Email">Email</label>
+
+        <input type="email" id="email" placeholder="Email" name="email">
+    
+<textarea name="message" rows="6" placeholder="your message"></textarea>
+<button type="submit" class="btn"> <a href="mailto:deepabn2000@gmail.com">send</a></button>
+    </form> 
+
+</div>  -->
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+<div id="footer">    
+    <footer>
+    <p>&copy; 2023 Deepika. All rights reserved.</p>
+
+</footer>
+</div>
+
+</body>
+</html>
